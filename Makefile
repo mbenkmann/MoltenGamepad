@@ -115,12 +115,15 @@ clean : $(BUILT_INS_CLEAN)
 	$(RM) moltengamepad
 	$(RM) $(OBJS)
 	$(RM) source/core/mg_core.a
+	$(RM) *~ *.bak */*~ */*.bak
 
 clean_plugins : $(EXTERNAL_PLUGS_CLEAN)
 	$(RM) $(EXTERNAL_PLUGS)
 
 %_clean :
 	$(MAKE) -C source/plugin/$* clean
+
+distclean: clean clean_plugins
 
 .PHONY: debug
 debug : CPPFLAGS+=-DDEBUG -g
