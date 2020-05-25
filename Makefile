@@ -45,7 +45,7 @@ COMPILE.cpp = $(CXX) $(DEPFLAGS) $(CXXFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c
 POSTCOMPILE = mv -f $(DEPDIR)/$*.Td $(DEPDIR)/$*.d
 
 
-all : eventlists moltengamepad plugins documentation/moltengamepad.1
+all : moltengamepad plugins documentation/moltengamepad.1
 
 .SECONDEXPANSION:
 %.o : %.c
