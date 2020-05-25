@@ -14,8 +14,6 @@ test -x debian/make-orig -a -d .git || error "Could not find debian/make-orig"
 version="$(dpkg-parsechangelog -S Version | sed 's/-.*//')"
 tag="$version"
 
-tag=2020.06.01
-
 is_tag="$(git tag -l "$tag")"
 test $? = 0 || error "Could not execute git tag"
 
