@@ -12,9 +12,10 @@ test -x debian/make-orig -a -d .git || error "Could not find debian/make-orig"
 
 # get most recent version with -... suffix stripped
 version="$(dpkg-parsechangelog -S Version | sed 's/-.*//')"
+pkg="$(dpkg-parsechangelog -S Source)"
 
 if [ "$1" = "--dont-overwrite" ]; then
-  test -f ../moltengamepad_$version.orig.tar.xz && exit 0
+  test -f ../${pkg}_${version}.orig.tar.xz && exit 0
 fi
 
 tag="$version"
@@ -35,6 +36,6 @@ else
   echo Creating .orig.tar.xz from tree-ish $tag
 fi
 
-rm -f ../moltengamepad_$version.orig.tar.xz
-git archive --worktree-attributes -o ../moltengamepad_$version.orig.tar --prefix=moltengamepad-$version/ "$tag"
-xz ../moltengamepad_$version.orig.tar
+rm -f ../${pkg}_${version}.orig.tar.xz
+git archive --worktree-attributes -o ../${pkg}_${version}.orig.tar --prefix=${pkg}-${version}/ "$tag"
+xz ../${pkg}_${version}.orig.tar
