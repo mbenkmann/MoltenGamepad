@@ -11,6 +11,7 @@ Vcs-Browser: https://github.com/mbenkmann/MoltenGamepad
 Package: moltengamepad
 Architecture: any
 Depends: ${misc:Depends}
+Recommends: moltengamepad-data
 Description: Make using game controllers pain-free
  Allow hotplugging of game controllers (i.e. you don't have to restart the
  game when switching controllers) and make them all behave like
