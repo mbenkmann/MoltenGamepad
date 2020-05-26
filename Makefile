@@ -150,3 +150,7 @@ documentation/moltengamepad.1.md: documentation/manpage-start.md README.md \
 documentation/moltengamepad.1: documentation/moltengamepad.1.md
 	go-md2man -in=$< -out=$@
 
+.PHONY: debian
+debian:
+	dpkg-buildpackage -rfakeroot -sa -uc -us
+
