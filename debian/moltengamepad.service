@@ -1,0 +1,15 @@
+[Unit]
+Description=MoltenGamepad unified controller mapping
+After=systemd-udevd.service
+Before=systemd-user-sessions.service
+
+
+[Service]
+ExecStart=/usr/bin/moltengamepad --stay-alive
+User=gamepad
+StandardOutput=journal
+StandardError=inherit
+StandardInput=null
+
+[Install]
+WantedBy=multi-user.target

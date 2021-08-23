@@ -11,10 +11,14 @@ moltengamepad for Debian
   This allows games for 2 players to work right away with no hassle.
 * The package moltengamepad-data contains the /etc/xdg/moltengamepad/gendevices and profiles
   for known gamepads.
-* The program moltengamepad is NOT automatically started. Users that want it have to start it
-  manually, e.g.
+* A service moltengamepad.service is provided. It can be enabled by
+    systemctl enable moltengamepad.service
+  and disabled by
+    systemctl disable moltengamepad.service
+
+  If disabled, users can start moltengamepad manually, e.g. by
      moltengamepad --stay-alive </dev/null &
-  Usually this command would be put into some auto-start file.
+  Usually this command would be put into some user auto-start file.
 
 
- -- Matthias S. Benkmann <matthias@winterdrache.de>  Mon, 25 May 2020 15:12:31 +0200
+ -- Matthias S. Benkmann <matthias@winterdrache.de>  Mon, 23 Aug 2021 11:11:11 +0200
