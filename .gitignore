@@ -4,3 +4,6 @@ moltengamepad
 *.so
 *.po
 *.a
+source/core/eventlists/axis_list.cpp
+source/core/eventlists/key_list.cpp
+source/core/eventlists/rel_list.cpp
