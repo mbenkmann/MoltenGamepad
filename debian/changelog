@@ -1,3 +1,9 @@
+moltengamepad (2021.08.23-msb1) unstable; urgency=medium
+
+  * Add systemd service to debian packaging
+
+ -- msb <msb@ninja>  Mon, 23 Aug 2021 12:02:06 +0200
+
 moltengamepad (2020.11.01-msb1) unstable; urgency=medium
 
   * Initial release
