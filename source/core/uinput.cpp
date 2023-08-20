@@ -55,7 +55,7 @@ uinput::~uinput() {
 
 int uinput::make_gamepad(const uinput_ids& ids, bool dpad_as_hat, bool analog_triggers, bool rumble) {
   static int abs[] = { ABS_X, ABS_Y, ABS_RX, ABS_RY};
-  static int key[] = { BTN_SOUTH, BTN_EAST, BTN_NORTH, BTN_WEST, BTN_SELECT, BTN_MODE, BTN_START, BTN_TL, BTN_TR, BTN_THUMBL, BTN_THUMBR, -1};
+  static int key[] = { BTN_SOUTH, BTN_EAST, BTN_NORTH, BTN_WEST, BTN_SELECT, BTN_MODE, BTN_BASE, BTN_BASE2, BTN_BASE3, BTN_BASE4, BTN_BASE5, BTN_BASE6, BTN_START, BTN_TL, BTN_TR, BTN_THUMBL, BTN_THUMBR, -1};
   struct uinput_user_dev uidev;
   int fd;
   int i;
