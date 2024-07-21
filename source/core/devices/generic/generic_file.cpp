@@ -5,14 +5,22 @@
 generic_file::generic_file(moltengamepad* mg, struct udev_device* node, bool grab_ioctl, bool grab_chmod, bool grab_hid_chmod, bool rumble) {
   this->mg = mg;
   this->rumble = rumble;
+  struct udev_device* parent = udev_device_get_parent(node);
   struct udev_device* hidparent = udev_device_get_parent_with_subsystem_devtype(node,"hid",NULL);
   if (hidparent) {
     const char* uniq_id = udev_device_get_property_value(hidparent, "HID_UNIQ");
     if (uniq_id) 
       uniq = std::string(uniq_id);
+
     const char* phys_id = udev_device_get_property_value(hidparent, "HID_PHYS");
-    if (phys_id)
-      phys = std::string(phys_id);
+    if (phys_id) {
+      this->phys = std::string(phys_id);
+    }
+  } else if(parent) {
+    const char* phys_id = udev_device_get_sysattr_value(parent,"phys");
+    if (phys_id) {
+      this->phys = std::string(phys_id);
+    }
   }
   epfd = epoll_create(1);
   if (epfd < 1) perror("epoll create");
