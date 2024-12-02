@@ -1,10 +1,9 @@
-moltengamepad (2024.11.24-msb1) UNRELEASED; urgency=medium
+moltengamepad (2024.12.01-msb1) UNRELEASED; urgency=medium
 
   * Fix build errors on Ubuntu 24.04
-  * Map btn_base and btn_base{n} in virtual controller and enable in gamepad profile
   * physical device identification
 
- -- Matthias S. Benkmann <msb@winterdrache.de>  Sun, 24 Nov 2024 20:59:35 +0100
+ -- Matthias S. Benkmann <msb@winterdrache.de>  Mon, 02 Dec 2024 01:29:37 +0100
 
 moltengamepad (2021.08.23-msb1) unstable; urgency=medium
 
