@@ -490,12 +490,6 @@ void profile::build_default_gamepad_profile() {
     (*map)["up"] =   {new btn2btn(BTN_DPAD_UP), DEV_KEY, 1, nullptr};
     (*map)["down"] = {new btn2btn(BTN_DPAD_DOWN), DEV_KEY, 1, nullptr};
     (*map)["mode"] = {new btn2btn(BTN_MODE), DEV_KEY, 1, nullptr};
-    (*map)["base"] = {new btn2btn(BTN_BASE), DEV_KEY, 1, nullptr};
-    (*map)["base2"] = {new btn2btn(BTN_BASE2), DEV_KEY, 1, nullptr};
-    (*map)["base3"] = {new btn2btn(BTN_BASE3), DEV_KEY, 1, nullptr};
-    (*map)["base4"] = {new btn2btn(BTN_BASE4), DEV_KEY, 1, nullptr};
-    (*map)["base5"] = {new btn2btn(BTN_BASE5), DEV_KEY, 1, nullptr};
-    (*map)["base6"] = {new btn2btn(BTN_BASE6), DEV_KEY, 1, nullptr};
     (*map)["start"] = {new btn2btn(BTN_START), DEV_KEY, 1, nullptr};
     (*map)["select"] = {new btn2btn(BTN_SELECT), DEV_KEY, 1, nullptr};
     (*map)["tl"] =    {new btn2btn(BTN_TL), DEV_KEY, 1, nullptr};
